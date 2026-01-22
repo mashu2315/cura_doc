@@ -1,0 +1,37 @@
+
+
+@import "tailwindcss";
+
+.center {
+  @apply min-h-screen flex items-center justify-center bg-black;
+}
+
+.input {
+  @apply w-full p-2 border mb-3 text-black;
+}
+
+.btn {
+  @apply w-full bg-black text-white p-2 mt-3;
+}
+
+.title {
+  @apply text-3xl font-bold mb-6;
+}
+
+.card {
+  @apply bg-white p-4 shadow rounded;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
