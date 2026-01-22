@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CuraDoc – Role-Based Signup & Login System
 
-## Getting Started
+CuraDoc is a role-based authentication and dashboard system built using **Next.js (App Router)**.  
+It supports two user roles — **Doctor** and **Patient** — and redirects users to their respective dashboards based on the selected role.
 
-First, run the development server:
+This project is implemented as a **frontend-only application**, using local storage to simulate authentication and persistence.
 
+---
+
+##  Tech Stack Used
+
+- **Next.js 14+** (App Router)
+- **React.js**
+- **Tailwind CSS** (for all UI styling)
+- **Framer Motion** (smooth page transitions)
+- **Local Storage** (mock authentication & persistence)
+- **TypeScript**
+
+---
+
+##  Features
+
+###  Authentication
+- Signup with:
+  - Full Name
+  - Email
+  - Password
+  - Role selection (Doctor / Patient)
+- Login with role-based validation
+- Basic form validation (empty fields, email format, password length)
+
+###  Role-Based Redirection
+- Doctor → Doctor Dashboard
+- Patient → Patient Dashboard
+
+###  Protected Routes
+- Dashboard pages are accessible only after login
+- Auto redirect to login if user is not authenticated
+
+###  Dashboards
+- Distinct Doctor & Patient dashboards
+- Sidebar navigation:
+  - Dashboard
+  - Appointments
+  - History
+  - Profile
+- Fully functional navigation (desktop & mobile)
+
+###  Profile (Common for Doctor & Patient)
+- View profile details
+- Edit profile information (mock update)
+- View:
+  - Appointments
+  - Medical / Activity History
+- Dummy data shown based on role
+
+###  Appointments & 📋 History
+- Shared structure for both roles
+- Role-based dummy data rendering
+
+###  UI / UX
+- Clean black & white theme
+- Responsive layout
+- Sidebar → Navbar behavior on small screens
+- Smooth page transitions using Framer Motion
+
+---
+
+##  How to Run the Project
+
+### 1️⃣ Install dependencies
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Start development server
+```bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run dev
+```
+### 3️⃣ Open in browser
+```bash
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
