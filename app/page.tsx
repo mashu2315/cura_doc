@@ -1,9 +1,10 @@
-
 import AuthForm from "@/components/AuthForm";
+import GuestRoute from "@/components/GuestRoute";
 
 export default function LoginPage() {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 px-4 py-8">
+    <GuestRoute>
+      <main className="flex items-center justify-center min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-100 px-4 py-8">
       <div className="w-full max-w-6xl grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left side - Branding */}
         <div className="hidden md:block text-center md:text-left">
@@ -20,7 +21,7 @@ export default function LoginPage() {
           </div>
           <div className="mt-8 md:mt-12 space-y-4">
             <div className="flex items-center gap-4 text-gray-700">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl flex-shrink-0">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl shrink-0">
                 ✓
               </div>
               <div>
@@ -29,7 +30,7 @@ export default function LoginPage() {
               </div>
             </div>
             <div className="flex items-center gap-4 text-gray-700">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl flex-shrink-0">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl shrink-0">
                 ✓
               </div>
               <div>
@@ -38,7 +39,7 @@ export default function LoginPage() {
               </div>
             </div>
             <div className="flex items-center gap-4 text-gray-700">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl flex-shrink-0">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center text-white text-lg md:text-xl shrink-0">
                 ✓
               </div>
               <div>
@@ -55,5 +56,6 @@ export default function LoginPage() {
         </div>
       </div>
     </main>
+    </GuestRoute>
   );
 }
